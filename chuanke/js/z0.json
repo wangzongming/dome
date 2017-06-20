@@ -1,0 +1,16 @@
+[
+{"title":"猜你喜欢",
+"child":[{"img":"images/cz01.jpg","name":"photoshop从入门到精通——入门概念","price":"免费","tb":"&#xe788;","num":"20.9万","ks":"次学习"},
+		{"img":"images/cz02.jpg","name":"多学多用：产后瑜伽——私房静yoga","price":"¥69.00","tb":"&#xe788;","num":"1364","ks":"次学习"},
+		{"img":"images/cz03.jpg","name":"こここ老师教你”se“日语【海贝日语】","price":"免费","tb":"&#xe788;","num":"20.9万","ks":"次学习"},
+		{"img":"images/cz04.jpg","name":"十分钟玩转PHP","price":"免费","tb":"&#xe788;","num":"11.3万","ks":"次学习"}],
+"more":"更多"},
+
+{"title":"精品课程",
+"tit":["编程语言","工具软件","外语学习","职业资格"],
+"child":[{"img":"images/cz05.jpg","name":"PS零基础入门到精通VIP初级班","price":"¥300.01","tb":"&#xe788;","num":"9578","ks":"次学习"},
+		{"img":"images/cz06.jpg","name":"Excel2013视频教程全套系统课程","price":"¥128.00","tb":"&#xe788;","num":"1.1万","ks":"次学习"},
+		{"img":"images/cz07.jpg","name":"初学者实用平面设计","price":"免费","tb":"&#xe788;","num":"1.5万","ks":"次学习"},
+		{"img":"images/cz08.jpg","name":"PR CS6视频实例教程","price":"¥20.00","tb":"&#xe788;","num":"301","ks":"次学习"}],
+"more":"更多"}
+]

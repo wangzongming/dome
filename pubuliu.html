@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;}
+        #main{
+            margin:0 auto;
+            /*border: 1px solid red;*/
+            text-align: center;
+            position: relative;
+        }
+        #main:after{
+            content:'';
+            height:0;
+            clear:both;
+            visibility: hidden;
+            display:block;
+        }
+        #main div{
+            width:200px;
+            height:100px;
+            background:red;
+            float:left;    
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"> </div>
+</body>
+
+<script>
+    //获取main
+    var main=document.querySelector("#main");
+    
+    //调用方法创建box
+    create(30,"div","box");
+    
+    //window宽
+    var ww=document.documentElement.clientWidth;
+    //获取box框
+    var box=document.getElementsByClassName("box");
+    //获取box宽度
+    var bw=box[1].offsetWidth+20;
+    //判断行个数
+    var cols=Math.floor(ww/bw);
+    // 设置main宽
+    main.style.width=cols*bw+"px";
+    //创建数组存放box
+    var boxarr=[];
+    //获取页面box
+    var boxs=document.getElementsByClassName("box");
+    f1();
+    //判断滚动条的高度
+    window.onscroll=function(){
+        //可视区的高度
+        let wh=document.documentElement.clientHeight;
+        //获取滚动条的高
+        var scrollh=document.documentElement.scrollTop||document.body.scrollTop; 
+        //获得滚动后body的高度       
+        var bodyh=document.body.scrollHeight;
+        //获得最后一个box距离top的高
+        var lastboxh=boxs[boxs.length-1].offsetTop+boxs[boxs.length-1].offsetHeight/2;
+        
+        // 如果可视区高加上滚动条滚动高度大于或者等于最后一个box高一半执行语句
+        if(wh+scrollh>=lastboxh){
+            create(30,"div","box");
+            f1();
+        }
+
+    }//滚动事件结束
+
+
+//创建元素方法
+function create(n,ele,className){
+    for(let i=0;i<n;i++){
+            var box=document.createElement(ele);
+            box.className=className;
+            box.innerHTML=i;
+            box.style.lineHeight=50+"px";
+            box.style.color="green";
+            box.style.fontSize="30px";
+            var boxh=parseInt(Math.random()*250+50); //随机高
+            var color1=parseInt(Math.random()*255);
+            var color2=parseInt(Math.random()*255);
+            var color3=parseInt(Math.random()*255);
+            box.style.background="rgb("+color1+","+color2+","+color3+")"
+            box.style.height=boxh+"px";
+            main.appendChild(box);
+        }
+}
+
+
+function f1(){
+    var arrh=[];//存放一行中的box高
+        for(var i=0;i<box.length;i++){
+            if(cols>i){
+                arrh.push(box[i].offsetHeight+20);
+            }else{
+                box[i].style.position="absolute";
+                var minh=Math.min.apply(null,arrh);//求最小值
+                var index=arrh.indexOf(minh);//查找最小值索引
+                box[i].style.top=minh+"px";//设置top
+                box[i].style.left=box[index].offsetLeft-10+"px";//设置left
+                // 这一步要改变arrh[index]也就是最小值  
+                arrh[index]+=box[i].offsetHeight+20;
+            }
+        }
+}
+
+    // console.log("可视区width为:"+ww);
+    // console.log("可视区高为:"+wh)
+    // console.log("数组是:"+arrh);
+    // console.log("最小高:"+minh);
+    // console.log("最小值索引:"+index);
+    // console.log("box的个数"+boxs.length)
+</script>
+
+
+
+
+
+

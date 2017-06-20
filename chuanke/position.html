@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        .div{
+            width:100px;height:100px;
+            background:darkgoldenrod;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+</body>
+</html>
+
+<script>
+    $(function(){
+        $(document).mousemove(function(event){
+            var x=$(".div").position();
+            $(".div").offset({top:event.pageY,left:event.pageX}).text(x.top);
+        
+            // console.log(event.pageX,event.pageY);
+        })
+    })
+
+</script>
+
+

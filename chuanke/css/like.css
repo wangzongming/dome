@@ -1,0 +1,336 @@
+.content{
+    width:1200px;
+    /*border:1px solid red;*/
+    margin:0 auto;
+    margin-top:10px;
+    /*margin-bottom:200px;  要干掉*/
+}
+.content:after,.content:before{
+    content:"";
+    display:table;
+}
+.content:after{
+    clear:both;
+}
+
+/*左边*/
+.content .content_l{
+    /*width:820px;*/
+    width:860px;
+    /*border:1px solid darkcyan;*/
+    display: inline-block;
+    float:left;
+}
+/*右边*/
+ .content .content_r{
+    /*width:350px;*/
+    width:310px;
+    /*border:1px solid red;*/
+    display: inline-block;
+    float:right;
+    /*padding-right:10px;*/
+}
+.content_l_list{
+    width:100%;
+    background:white;
+    margin-top:25px;
+    padding:10px 20px;
+     box-sizing: border-box;
+      border:1px solid #ccc;
+}
+/*标题*/
+.content_l_list h4{
+    font-size:16px;
+    color:#333333;
+    padding-left:8px;
+    box-sizing: border-box;
+    border-left:8px solid #40BB8A;
+     cursor: pointer;
+}
+.content_l_list h4 span{
+    font-size:14px;
+    color:#333333;
+    font-weight:300;
+    float:right;
+     cursor: pointer;
+}
+.content_l_list h4 span:after{
+    content:"  >>";
+}
+.like_ul{
+    width:100%;
+    display: table;
+    /*border:1px solid red;*/
+    margin-top:30px;
+      text-align: center;
+    padding-left:20px;
+    box-sizing: border-box;
+     /*border:1px solid red;*/
+}
+.like_li{
+    display: table-cell;
+    /*border:1px solid red;*/
+    width:25%;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.like_li .like_img{
+     width:85%;
+     overflow: hidden;
+     transition:0.4s;
+     text-align: center;
+}
+.like_li img{
+    width:100%;
+    vertical-align: middle;
+    transition:0.4s;
+}
+.like_li img:hover{
+    transform: scale(1.2);
+    transition:all 0.4s;
+}
+.content .like_ul .like_list_name{
+    font-size:12px;
+    color:#333333;
+    width:85%;
+    display: inline-block;
+    text-align: center;
+    float:left;
+    padding-top:10px;
+}
+.like_list_t{
+    display: block;
+    width:85%;
+    text-align: left;
+    padding-top:35px;
+    font-size:13px;
+    padding-left:5px;
+    box-sizing: border-box;
+}
+.content .price_red {
+    color:red;
+}
+.content .person{
+    font-size:13px;
+    text-align: right;
+    float:right;
+      font-weight: 300;
+}
+.content .blue{
+    color:#40BB8A;
+    padding:0 5px;
+    box-sizing: border-box;
+    font-size:13px;
+    font-weight: 300;
+}
+
+/*免费好课*/
+.mianfei{
+    width:100%;
+    /*height:100px;*/
+    /*border:1px solid red;*/
+    box-sizing: border-box;
+    padding:10px 20px;
+    background:white;
+    margin:20px 0;
+     border:1px solid #ccc;
+}
+.mianfei h4{
+    font-size:16px;
+    color:#333333;
+    padding-left:8px;
+    box-sizing: border-box;
+    border-left:8px solid #40BB8A;
+     cursor: pointer;
+}
+.mianfei .more{
+    font-size:14px;
+    color:#333333;
+    font-weight:300;    
+    float:right;
+     cursor: pointer;
+     padding-right:10px;
+}
+.mianfei .more::after{
+    content:"  >>";
+}
+.mianfei ul{
+    display: table;
+    margin-top:20px;
+}
+.mianfei .mianfei_li{
+    list-style: none;
+    display: table-cell;
+    width:25%;
+}
+.mianfei_img{
+    width:85%;
+    overflow: hidden;
+}
+.mianfei_img img{
+    width:100%;
+     transition:0.3s;
+}
+.mianfei_img img:hover{
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transition:0.3s;
+}
+.mianfei .mianfei_name{
+    color:#333333;
+    font-size:14px;
+    line-height: 30px;
+    font-weight:600px;
+    cursor:pointer;
+}
+/*免费好课over*/
+
+/*中间四个大内容*/
+.z1{
+    width:100%;
+    /*height:100px;*/
+    /*border:1px solid red;*/
+}
+.z1>ul{
+    margin:20px 0;
+    margin-bottom:0;
+    /*height:100px;*/
+    background:white;
+    /*border:1px solid red;*/
+    box-sizing: border-box;
+     border:1px solid #ccc;
+   
+}
+.z1 ul:first-child{
+    margin-top:0;
+}
+
+.z1 ul .title{
+    color:#333333;
+    height:20px;
+    font-size:16px;
+    margin-left:20px;
+    box-sizing:border-box;
+    cursor:pointer;
+    font-weight:600;
+    border-left:7px solid #40BB8A;
+    padding-left:10px;
+    line-height: 40px;
+}
+.z1 .atitle{
+    margin-left:10px;
+}
+.z1 .atitle span{
+    margin:0 5px;
+     box-sizing:border-box;
+     cursor:pointer;
+     font-size:13px;
+     color:#333333;
+}
+.z1 .atitle span:hover{
+    color:#40BB8A;
+}
+.z1 .more{
+    float:right;
+    cursor:pointer;
+    padding-right:30px;
+   margin-top:10px;
+   color:#333333;
+   font-size:14px;
+}
+.z1 .more::after{
+    content:"   >>";
+}
+.z1 .more:hover{
+    color:#40BB8A;
+}
+
+/*//四个小块内容*/
+.z1 .z1_li{
+   width:100%;
+   box-sizing:border-box;
+}
+.z1_li:after,z1.before{
+    content:"";
+    display:table;
+}
+.z1_li:after{
+    clear:both;
+}
+.z1 .z1_li_c{
+    float:left;
+    list-style: none;
+    width:50%;
+    /*height:100px;*/
+    /*border-bottom:1px solid #ccc;*/
+    box-sizing: border-box;
+}
+.z1_li_c{
+    padding:10px;
+    box-sizing: border-box;
+}
+.z1 .z1_li_c:nth-of-type(odd){
+  border-right:1px solid #ccc;
+}
+.z1 .z1_li_c:nth-of-type(1){
+   border-bottom:1px solid #ccc;
+}
+.z1 .z1_li_c:nth-of-type(2){
+   border-bottom:1px solid #ccc;
+}
+.z1  .z1_img{
+    display:inline-block;
+    width:35%;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.z1 .z1_li_c .z1_img img{
+    width:100%;
+    vertical-align: middle;
+     transition:0.3s;
+}
+.z1 .z1_li_c .z1_img img:hover{
+    transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    transition:0.3s;
+}
+.z1 .z1_desc{
+    display:inline-block;
+    width:65%;
+    float:right;
+    padding-left:10px;
+    box-sizing:border-box;
+}
+.z1 .z1_li_t{
+    font-size:14px;
+    color:#333333;
+    box-sizing: border-box;
+    font-weight:600;
+    display: inline-block;
+    /*padding-left:10px;*/
+    width:100%;
+}
+.z1 .z1_li_m{
+    line-height: 40px;
+    font-size:13px;
+    color:#333333;
+    display: inline-block;
+    width:100%;
+}
+.z1 .z1_li_m span{
+    margin:0 5px;
+    cursor:pointer;
+}
+.z1 .z1_li_m .z1_num{
+    color:#40BB8A;
+}
+.z1 .z1_li_b{
+    color:#40BB8A;
+    font-weight:600;
+    font-size:15px;
+}
+/*中间四个大内容 over*/
+

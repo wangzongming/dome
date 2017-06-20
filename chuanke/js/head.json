@@ -1,0 +1,39 @@
+{
+    "t_nav":{"t_logo":"images/logo_t.png",
+                 "t_down":[{"icon":"&#xe790;","text":"下载传课"},
+                                  {"icon":"&#xe73c;","text":"购物车"},
+                                  {"down_menu":[{"image":"images/ico-code-app.png","desc":"扫描下载官方app"},
+                                                              {"title":"更多下载 :","list1":"pc客户端下载","list2":"更多传课产品"}]}],
+                 "t_search":{"class":["学校&nbsp;&#xe638;","课程&nbsp;&#xe638;"]},
+                 "t_land":["马上登陆","注册"]},
+    "t_banner":["images/banner1.jpg","images/banner2.jpg","images/banner3.jpg","images/banner4.jpg","images/banner5.jpg"],
+    "t_nav2":[{"title":"所有课程分类","class":""},
+                    {"title":"首页","class":""},
+                    {"title":"知识图谱","class":["it高新技能","公务员考试","计算机二级","考研一站通"]},
+                    {"title":"it精英","class":""},
+                    {"title":"考试达人","class":""},
+                    {"title":"人在职场","class":""},
+                    {"title":"中小学","class":""},
+                    {"title":"个人名师","class":""},
+                    {"title":"创建学校","image":"images/nav2.png","class":""}],
+    "t_shouye_l":[{"one":"images/liuxue.jpg"},
+                           {"two":"images/psshizhan.jpg"},
+                           {"three":["images/zimeiti.jpg","images/huoppt.jpg"]}],
+    "t_shouye_r":{"title":"发现","list":[{"image":"images/zaixiancidian.jpg","title":"Python词典","desc":"最权威的Python在线词典"},
+                                                              {"image":"images/xiaoyuanhaoke.jpg","title":"百度校园","desc":"最前沿的技术解密，最清晰的人才职业导航。"},
+                                                              {"image":"images/xinke.jpg","title":"新课速递","desc":"最新课程抢先看"}]}
+                        
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

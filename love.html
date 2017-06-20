@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--i love xiazuzu-->
+		<!--<meta name="viewport"123 content="width=1000px,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<title>3D爱心</title>
+		<!--
+        	作者：1746809408@qq.com  by:m
+        	时间：2017-03-30
+        	描述：3D爱心
+        -->
+		<style type="text/css">
+			
+			body{
+				perspective:1500;
+				-webkit-perspective:1500;
+				-moz-perspective:900;
+				-ms-perspective:900;
+				-o-perspective:900;
+				background:black;
+			}
+			.heart{
+				width:300px;
+				height:400px;
+				position: relative;
+				margin:150px auto;
+				-webkit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				-ms-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+				animation:heart 13s linear infinite;
+				
+			}
+			.cir{
+				width:200px;
+				height:300px;
+				border:2px solid red;
+				border-width:2px 2px 0 0;
+				border-radius:50% 70% 0;
+				position: absolute;
+				top:0;
+				left:0;
+				animation: yan 3s linear infinite;
+			}
+			@keyframes yan{
+				from{border-color:green;}
+				to{border-color:blue;}
+			}
+			@keyframes heart{
+				from{
+					-webkit-transform: rotateX(0) rotateY(0);
+					-moz-transform: rotateX(0) rotateY(0);
+					-ms-transform: rotateX(0) rotateY(0);
+					-o-transform: rotateX(0) rotateY(0);
+					transform: rotateX(0) rotateY(0);
+				}
+				to{
+					-webkit-transform:rotateX(360deg) rotateY(360deg);
+					-moz-transform:rotateX(360deg) rotateY(360deg);
+					-ms-transform:rotateX(360deg) rotateY(360deg);
+					-o-transform:rotateX(360deg) rotateY(360deg);
+					transform:rotateX(360deg) rotateY(360deg);
+				}
+			}
+			@-webkit-keyframes heart{
+				from{
+					-webkit-transform: rotateX(0) rotateY(0);
+					-moz-transform: rotateX(0) rotateY(0);
+					-ms-transform: rotateX(0) rotateY(0);
+					-o-transform: rotateX(0) rotateY(0);
+					transform: rotateX(0) rotateY(0);
+				}
+				to{
+					-webkit-transform:rotateX(360deg) rotateY(360deg);
+					-moz-transform:rotateX(360deg) rotateY(360deg);
+					-ms-transform:rotateX(360deg) rotateY(360deg);
+					-o-transform:rotateX(360deg) rotateY(360deg);
+					transform:rotateX(360deg) rotateY(360deg);
+				}
+			
+			}
+			@-moz-keyframes heart{
+				from{
+					-webkit-transform: rotateX(0) rotateY(0);
+					-moz-transform: rotateX(0) rotateY(0);
+					-ms-transform: rotateX(0) rotateY(0);
+					-o-transform: rotateX(0) rotateY(0);
+					transform: rotateX(0) rotateY(0);
+				}
+				to{
+					-webkit-transform:rotateX(360deg) rotateY(360deg);
+					-moz-transform:rotateX(360deg) rotateY(360deg);
+					-ms-transform:rotateX(360deg) rotateY(360deg);
+					-o-transform:rotateX(360deg) rotateY(360deg);
+					transform:rotateX(360deg) rotateY(360deg);
+				}
+			
+			}
+			@-ms-keyframes heart{
+				from{
+					-webkit-transform: rotateX(0) rotateY(0);
+					-moz-transform: rotateX(0) rotateY(0);
+					-ms-transform: rotateX(0) rotateY(0);
+					-o-transform: rotateX(0) rotateY(0);
+					transform: rotateX(0) rotateY(0);
+				}
+				to{
+					-webkit-transform:rotateX(360deg) rotateY(360deg);
+					-moz-transform:rotateX(360deg) rotateY(360deg);
+					-ms-transform:rotateX(360deg) rotateY(360deg);
+					-o-transform:rotateX(360deg) rotateY(360deg);
+					transform:rotateX(360deg) rotateY(360deg);
+				}
+			
+			}
+			@-o-keyframes heart{
+				from{
+					-webkit-transform: rotateX(0) rotateY(0);
+					-moz-transform: rotateX(0) rotateY(0);
+					-ms-transform: rotateX(0) rotateY(0);
+					-o-transform: rotateX(0) rotateY(0);
+					transform: rotateX(0) rotateY(0);
+				}
+				to{
+					-webkit-transform:rotateX(360deg) rotateY(360deg);
+					-moz-transform:rotateX(360deg) rotateY(360deg);
+					-ms-transform:rotateX(360deg) rotateY(360deg);
+					-o-transform:rotateX(360deg) rotateY(360deg);
+					transform:rotateX(360deg) rotateY(360deg);
+				}
+			
+			}
+			
+			.cobe{
+				width:120px;
+				height:120px;
+				-webkit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				-ms-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+				/*margin: 100px 200px;*/
+				position: absolute;
+				top:120px;
+				left:50px;
+			}
+			.cobe span{
+				display: inline-block;
+				width:120px;
+				height:120px;
+				border: 1px solid pink;
+				opacity:0.95;
+				position: absolute;
+				top:0;
+				left:0;
+				color:red;
+				background: burlywood;
+			}
+			.cobe span img{
+				width:100%;
+				height:100%;
+			}
+			.cobe span:nth-of-type(1){
+				-webkit-transform: translateZ(60px);
+				-moz-transform: translateZ(60px);
+				-ms-transform: translateZ(60px);
+				-o-transform: translateZ(60px);
+				transform: translateZ(60px);
+			}
+			.cobe span:nth-of-type(2){
+				-webkit-transform: rotateY(90deg) translateZ(-62px);
+				-moz-transform: rotateY(90deg) translateZ(-62px);
+				-ms-transform: rotateY(90deg) translateZ(-62px);
+				-o-transform: rotateY(90deg) translateZ(-62px);
+				transform: rotateY(90deg) translateZ(-62px);
+			}
+			.cobe span:nth-of-type(3){
+				-webkit-transform: rotateX(90deg) translateZ(62px);
+				-moz-transform: rotateX(90deg) translateZ(62px);
+				-ms-transform: rotateX(90deg) translateZ(62px);
+				-o-transform: rotateX(90deg) translateZ(62px);
+				transform: rotateX(90deg) translateZ(62px);
+				background: darkgoldenrod;
+			}
+			.cobe span:nth-of-type(4){
+				-webkit-transform: rotateY(90deg) translateZ(60px);
+				-moz-transform: rotateY(90deg) translateZ(60px);
+				-ms-transform: rotateY(90deg) translateZ(60px);
+				-o-transform: rotateY(90deg) translateZ(60px);
+				transform: rotateY(90deg) translateZ(60px);
+				
+			}
+			.cobe span:nth-of-type(5){
+				-webkit-transform: rotateX(90deg) translateZ(-60px);
+				-moz-transform: rotateX(90deg) translateZ(-60px);
+				-ms-transform: rotateX(90deg) translateZ(-60px);
+				-o-transform: rotateX(90deg) translateZ(-60px);
+				transform: rotateX(90deg) translateZ(-60px);
+				
+			}
+			.cobe span:nth-of-type(6){
+				-webkit-transform: translateZ(-60px);
+				-moz-transform: translateZ(-60px);
+				-ms-transform: translateZ(-60px);
+				-o-transform: translateZ(-60px);
+				transform: translateZ(-60px);
+			}
+			h1{
+				color:darkred;
+				text-align: center;
+				font-size:50px;
+				text-shadow:10px 3px 10px #00EF00;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>3D 爱心    M</h1>
+		<div class="heart">
+			<div class="cobe">
+				<span id="img-1"><img src="img/q (1).jpg"/></span>
+				<span id="img-2"><img src="img/q (2).jpg"/></span>
+				<span id="img-3"><img src="img/q (3).jpg"/></span>
+				<span id="img-4"><img src="img/q (4).jpg"/></span>
+				<span id="img-5"><img src="img/q (5).jpg"/></span>
+				<span id="img-6"><img src="img/q (6).jpg"/></span>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var heart=document.getElementsByClassName("heart")[0];
+//			var str= new Date();
+			for(var i=0;i<60;i++){
+				var oDiv=document.createElement('div');
+				oDiv.className="cir";
+				oDiv.style.transform="rotateY("+6*i+"deg) rotateZ(47deg) translateX(63px)";
+				oDiv.style.webkitTransform="rotateY("+6*i+"deg) rotateZ(48deg) translateX(67px)";
+				oDiv.style.msTransform="rotateY("+6*i+"deg) rotateZ(47deg) translateX(63px)";
+				oDiv.style.mozTransform="rotateY("+6*i+"deg) rotateZ(45deg) translateX(63px)";
+				heart.appendChild(oDiv)
+//              heart.innerHTML=oDiv;
+			}
+			var end= new Date();
+//			console.log(str-end);
+			//createcreate create create create create crsecreate createcreatecreate create 
+		</script>
+	</body>
+</html>

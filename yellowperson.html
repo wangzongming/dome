@@ -1,0 +1,1073 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			#wrapper{
+				width:400px;
+				height:600px;
+				border: none;
+				box-shadow:2px 2px 5px 3px #000000;
+				margin:50px auto; 
+			    padding-top: 10px;
+			    background: whitesmoke;
+			    position: relative;
+			}
+			.litteH{
+				width:300px;
+				height:450px;
+				border-radius:100px;
+				background: yellow;
+				margin:0px auto;
+				border: 5px solid #000000;
+				position:relative;
+				overflow: hidden;
+				z-index:10;
+			}
+			.kuzi{
+				width:100%;
+				height:130px;
+				background:blue;
+				position: absolute;
+				bottom:0;
+				border-top: 5px solid #000000;
+			}
+			.kuzi .cobe{
+				width:150px;
+				height:60px;
+				background:blue;
+				margin: -70px auto;
+				border: 5px solid #000000;
+				border-bottom:5px solid transparent;
+			}
+			.yj{
+				width:235px;
+				height:125px;
+				margin:30px auto;
+				/*background: red;*/
+			}
+			.yj .l,.yj .r{
+				width:105px;
+				height:115px;
+				border: 6px solid black;
+				border-radius: 50%;
+				display:inline-block;
+				float: left;
+				position: relative;
+			}
+			.yj .l span,.yj .r span{
+				display: inline-block;
+				width:60px;
+				height: 70px;
+				background: black;
+				border-radius:30px;
+				position: absolute;
+				top:0;
+				right:10px;
+				bottom:0;
+				margin:auto;
+			}
+			#y-w-l,#y-w-r{
+				width:30px;
+				height:40px;
+				background: whitesmoke;
+				box-shadow: 0 0 5px #122B40 inset;
+			}
+			.item{
+				width:25px;
+				height:10px;
+				background: #122B40;
+			    position:absolute;
+				top:80px;
+				border: 5px solid #000000;
+			}
+			.item2{
+				width:30px;
+				height:10px;
+				background: #122B40;
+			    position:absolute;
+				top:80px;
+				right:0;
+				border: 5px solid #000000;
+			}
+			/*吊带*/
+			.kuzi span{
+				display:inline-block;
+				width:110px;
+				height:20px;
+				border:5px solid #000000;
+				background:#222222;
+				font-weight:700;
+				color:white;
+			}
+			.kuzi span:nth-of-type(1){
+				transform: rotate(30deg) translateX(-20px);
+				-moz-transform: rotate(30deg) translateX(-20px);
+				-ms-transform: rotate(30deg) translateX(-20px);
+				-webkit-transform: rotate(30deg) translateX(-20px);
+				padding-right: 5px;
+				text-align: right;
+			}
+
+			.kuzi span:nth-of-type(2){
+				float: right;
+				padding-left: 5px;
+				transform: rotate(-30deg) translateX(40px)  translateY(-61px);
+				-webkit-transform: rotate(-30deg) translateX(20px);
+				-moz-transform: rotate(-30deg) translateX(59px) translateY(-61px);
+				-ms-transform: rotate(-30deg) translateX(20px);
+			}
+			.clearfix:after,.claear:before{
+				content:'';
+				display:table;
+			}
+			.clearfix:after{
+				clear:both;
+			}
+			
+			/*嘴巴*/
+			.zb{
+				width:100px;
+				height:15px;
+				background: lightyellow;
+				border: 5px solid black;
+				margin:0 auto;
+				border-radius: 50%;
+				box-shadow:0 0 8px inset;
+			}
+			.kuzi .line1{
+				width:90px;
+				height:60px;
+				border: 5px solid #000000;
+				margin:40px auto;
+				border-bottom-left-radius:40px;
+				border-bottom-right-radius:40px;
+			}
+			.kuzi .line2{
+				width:60px;
+				height:30px;
+				border-bottom: 5px solid #000000;
+				border-right: 5px solid #000000;
+				position: absolute;
+				bottom: 70px;
+				left:0px;
+				border-bottom-right-radius:100%;
+			}
+			.kuzi .line3{
+				width:60px;
+				height:30px;
+				border-bottom: 5px solid #000000;
+				border-left: 5px solid #000000;
+				position: absolute;
+				bottom: 70px;
+				right:0px;
+				border-bottom-left-radius:100%;
+			}
+			.kuzi .line4{
+				width:5px;
+				height:50px;
+				background: black;
+				position:absolute;
+				bottom:0;
+				left:0px;
+				right:0;
+				margin:auto;
+			}
+			.foot{
+				width:250px;
+				height:90px;
+				position: absolute;
+				left:0;
+				right:0;
+				bottom:5px;
+				margin:auto;
+				/*z-index: -1;*/
+			}
+			.foot>div{
+				display: inline-block;
+				width:47%;
+				/*border: 1px solid red;*/
+				height:100%;
+				position: relative;
+			}
+			.foot .left span{
+				width:10px;
+				height:30px;
+				background:#262626;
+				border-top: 5px solid #000000;
+				border-left: 5px solid #000000;
+				border-right: 5px solid #000000;
+				display: inline-block;
+				position: absolute;
+				left: 50%;
+				z-index: 22;
+			}
+			.foot .right span{
+				width:10px;
+				height:30px;
+				background:#262626;
+				border-top: 5px solid #000000;
+				border-left: 5px solid #000000;
+				border-right: 5px solid #000000;
+				display: inline-block;
+				position: absolute;
+				right: 50%;
+				z-index: 22;
+			}
+			.foot .left span:nth-of-type(2){
+				width:50px;
+				height:30px;
+				border:5px solid #000000;
+				position: absolute;
+				bottom:10px;
+				left:19px;
+				transform: translateY(-10px)  rotate(-2deg);
+				-moz-transform: translateY(-10px)  rotate(-2deg);
+				-ms-transform: translateY(-10px)  rotate(-2deg);
+				-webkit-transform: translateY(-10px)  rotate(-2deg);
+				border-top-left-radius: 70%;
+				z-index:0;
+			}
+			.foot .right span:nth-of-type(2){
+				width:50px;
+				height:30px;
+				border:5px solid #000000;
+				position: absolute;
+				bottom:22px;
+				left:19px;
+				border-top-right-radius: 70%;
+				transform: translateX(20px) rotate(-3deg);
+				-webkit-transform: translateX(20px) rotate(-3deg);
+				-moz-transform: translateX(20px) rotate(-3deg);
+				-ms-transform: translateX(20px) rotate(-3deg);
+				z-index:0;
+			}
+			.shadow{
+				width:260px;
+				height:10px ;
+				box-shadow: 0 0 50px 10px #8C8C8C;
+				border-radius:50%;
+				position: absolute;
+				bottom:20px;
+				left:0;
+				right:0;
+				margin:auto;
+				background: #ccc;
+			}
+			.s1{
+				width:90px;
+				height:60px;
+				border:5px solid #000000;
+				border-right: none;
+				border-bottom: none;
+				border-top-left-radius:40px;
+				transform: rotate(-55deg);
+				-moz-transform: rotate(-55deg);
+				-webkit-transform: rotate(-55deg);
+				-ms-transform: rotate(-55deg);
+				position: absolute;
+				top:45%;
+				z-index: 0;
+				background: #101010;
+			}
+			.s2{
+				width:90px;
+				height:60px;
+				border:5px solid #000000;
+				border-left: none;
+				border-bottom: none;
+				border-top-right-radius:40px;
+				transform: rotate(55deg);
+				-webkit-transform: rotate(55deg);
+				-ms-transform: rotate(55deg);
+				-moz-transform: rotate(55deg);
+				position: absolute;
+				top:45%;
+				right:0;
+				z-index: 0;
+				background: #101010;
+			}
+			.s1 span{
+				width:50px;
+				height:30px;
+				border:5px solid #000000;
+				border-right: none;
+				border-bottom: none;
+				border-top-left-radius:20px;
+				margin-left:15px;
+				margin-top:15px;
+				position: absolute;
+				background: whitesmoke;
+			}
+			.s2 span{
+				width:50px;
+				height:30px;
+				border:5px solid #000000;
+				border-left: none;
+				border-bottom: none;
+				border-top-right-radius:20px;
+				margin-left:15px;
+				margin-top:15px;
+				position: absolute;
+				background: whitesmoke;
+			}
+			.hair{
+				width:200px;
+				height:50px;
+				margin:0 auto;
+			}
+			.hair span:nth-of-type(1){
+				display: inline-block;
+				width:40px;
+				height:50px;
+				border:5px solid #000000;
+				border-right:none;
+				border-top:none;
+				border-top-left-radius:50%;
+				border-bottom-left-radius:40%;
+				margin-left:10px;
+			}
+			.hair span:nth-of-type(2){
+				display: inline-block;
+				width:40px;
+				height:50px;
+				border:5px solid #000000;
+				border-right:none;
+				border-top:none;
+				border-top-left-radius:50%;
+				border-bottom-left-radius:40%;
+				margin-left:10px;
+			}
+			.hair span:nth-of-type(3){
+				display: inline-block;
+				width:40px;
+				height:50px;
+				border:5px solid #000000;
+				border-right:none;
+				border-top:none;
+				border-top-left-radius:50%;
+				border-bottom-left-radius:40%;
+				margin-left:5px;
+			}
+			#black{
+				width:20px;
+				height:20px;
+				background:rgba(0,0,0,0.7);
+				box-shadow: 0 0 1px rgba(211,211,211,0.3);
+				border-radius:50%;
+				margin-top:5px;
+				float:right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="hair">
+				<span id="hair1"></span>
+				<span id="hair2"></span>
+				<span id="hair3"></span>
+			</div>
+			<!--小黄人-->
+			<div class="litteH">
+				<!--眼睛-->
+				<div class="item"></div>
+				<div class="yj">
+					<div class="l" id="l">
+						<span>
+							<span id="y-w-l">
+								<div id="black"></div>
+							</span>
+						</span>
+					</div>
+					<div class="r" id="r">
+						<span class="">
+							<span id="y-w-r">
+								<div id="black"></div>
+							</span>
+						</span>
+					</div>
+				</div>
+				<div class="item2"></div>
+				
+				<!--嘴巴-->
+				<div class="zb">
+				   <span></span>
+				</div>
+				
+				
+				
+				<!--裤子-->
+				<div class="kuzi">
+					<!--正方形-->
+					<div class="cobe"></div>
+					<!--吊带-->
+					<span>X</span>
+					<span align="left" class="clearfix">X</span>
+					
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+					<div class="line4"></div>
+				</div>
+			</div>
+			<!--脚部-->
+			<div class="foot">
+				<div class="left">
+					<span id=""></span>
+					<span id=""></span>
+				</div>
+				<div class="right">
+					<span id=""></span>
+					<span id=""></span>
+				</div>
+			</div>
+			<!--阴影-->
+            <div class="shadow"></div>
+			
+			<!--手-->
+			<div class="s1">
+				<span></span>
+			</div>
+			<div class="s2">
+				<span></span>
+			</div>
+		</div>
+		
+</html>
+<script type="text/javascript">
+	//获取到卡片
+	var wrapper=document.getElementById("wrapper");
+	
+	//获取到眼珠大黑色部分
+	var 
+	    l=document.getElementById("l").getElementsByTagName('span')[0],
+	    r=document.getElementById("r").getElementsByTagName('span')[0];
+	    
+	//获取到眼珠 不包含眼珠里面部分
+	var yl=document.getElementById("y-w-l"),
+	    yr=document.getElementById("y-w-r");
+	    
+	//获取最小的眼珠
+	var black=document.getElementById("black");
+	var black1=yr.getElementsByTagName("div")[0];
+	
+	//获取到脚
+	var lFoot=document.getElementsByClassName("left")[0],
+		rFoot=document.getElementsByClassName("right")[0];
+		
+	//获取到手
+	var sl=document.getElementsByClassName('s1')[0],
+		sr=document.getElementsByClassName('s2')[0];
+		
+	//头发
+	var hair1=document.getElementById("hair1"),
+		hair2=document.getElementById("hair2"),
+		hair3=document.getElementById("hair3");
+		
+	document.onmousemove=function (ev){
+		ev=ev||window.event;
+		var x=ev.clientX,
+		    y=ev.clientY;
+		
+		//眼球左右
+		if(x<window.innerWidth/2){
+			black.style.float="left";
+			black1.style.float="left";
+			yl.style.left=-10+'px';
+			yr.style.left=-10+'px';
+			l.style.left=-10+'px';
+			r.style.left=-10+'px';
+			lFoot.style.transform="rotate(2deg) translateY(-3px)";
+			rFoot.style.transform="rotate(2deg) translateY(-3px)";
+			sr.style.transform="rotate(55deg)";
+			sl.style.transform="rotate(-50deg)";
+			hair1.style.borderTopLeftRadius="10px";
+			hair2.style.borderTopLeftRadius="10px";
+			hair3.style.borderTopLeftRadius="10px";
+		}else{
+			black.style.float="right";
+			black1.style.float="right";
+			yl.style.left=20+'px';
+			yr.style.left=20+'px';
+			l.style.left=30+'px';
+			r.style.left=30+'px';
+			rFoot.style.transform="rotate(-10deg) translateY(-10px)";
+			lFoot.style.transform="rotate(10deg) translateY(-10px)";
+			sl.style.transform="rotate(-55deg)";
+			sr.style.transform="rotate(50deg)";
+			var hair;
+			for(var i=1;i<4;i++){
+				
+			}
+			hair1.style.borderTopLeftRadius="50%";
+			hair2.style.borderTopLeftRadius="50%";
+			hair3.style.borderTopLeftRadius="50%";
+		}
+		
+		//眼球上下
+		if(y>innerHeight/2-200){
+			black.style.marginTop="15px";
+			black1.style.marginTop="15px";
+			yl.style.marginTop="20px";
+			yr.style.marginTop="20px";
+			l.style.top="10px";
+			r.style.top="10px";
+		}else{
+			black.style.marginTop="5px";
+			black1.style.marginTop="5px";
+			yl.style.marginTop="10px";
+			yr.style.marginTop="10px";
+			l.style.top="-15px";
+			r.style.top="-15px";
+			
+		}
+		
+
+	}
+	
+</script>
+
+=======
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			#wrapper{
+				width:400px;
+				height:600px;
+				border: none;
+				box-shadow:2px 2px 5px 3px #000000;
+				margin:50px auto; 
+			    padding-top: 10px;
+			    background: whitesmoke;
+			    position: relative;
+			}
+			.litteH{
+				width:300px;
+				height:450px;
+				border-radius:100px;
+				background: yellow;
+				margin:0px auto;
+				border: 5px solid #000000;
+				position:relative;
+				overflow: hidden;
+				z-index:10;
+			}
+			.kuzi{
+				width:100%;
+				height:130px;
+				background:blue;
+				position: absolute;
+				bottom:0;
+				border-top: 5px solid #000000;
+			}
+			.kuzi .cobe{
+				width:150px;
+				height:60px;
+				background:blue;
+				margin: -70px auto;
+				border: 5px solid #000000;
+				border-bottom:5px solid transparent;
+			}
+			.yj{
+				width:235px;
+				height:125px;
+				margin:30px auto;
+				/*background: red;*/
+			}
+			.yj .l,.yj .r{
+				width:105px;
+				height:115px;
+				border: 6px solid black;
+				border-radius: 50%;
+				display:inline-block;
+				float: left;
+				position: relative;
+			}
+			.yj .l span,.yj .r span{
+				display: inline-block;
+				width:60px;
+				height: 70px;
+				background: black;
+				border-radius:30px;
+				position: absolute;
+				top:0;
+				right:10px;
+				bottom:0;
+				margin:auto;
+			}
+			#y-w-l,#y-w-r{
+				width:30px;
+				height:40px;
+				background: whitesmoke;
+				box-shadow: 0 0 5px #122B40 inset;
+			}
+			.item{
+				width:25px;
+				height:10px;
+				background: #122B40;
+			    position:absolute;
+				top:80px;
+				border: 5px solid #000000;
+			}
+			.item2{
+				width:30px;
+				height:10px;
+				background: #122B40;
+			    position:absolute;
+				top:80px;
+				right:0;
+				border: 5px solid #000000;
+			}
+			/*吊带*/
+			.kuzi span{
+				display:inline-block;
+				width:110px;
+				height:20px;
+				border:5px solid #000000;
+				background:#222222;
+				font-weight:700;
+				color:white;
+			}
+			.kuzi span:nth-of-type(1){
+				transform: rotate(30deg) translateX(-20px);
+				-moz-transform: rotate(30deg) translateX(-20px);
+				-ms-transform: rotate(30deg) translateX(-20px);
+				-webkit-transform: rotate(30deg) translateX(-20px);
+				padding-right: 5px;
+				text-align: right;
+			}
+
+			.kuzi span:nth-of-type(2){
+				float: right;
+				padding-left: 5px;
+				transform: rotate(-30deg) translateX(40px)  translateY(-61px);
+				-webkit-transform: rotate(-30deg) translateX(20px);
+				-moz-transform: rotate(-30deg) translateX(59px) translateY(-61px);
+				-ms-transform: rotate(-30deg) translateX(20px);
+			}
+			.clearfix:after,.claear:before{
+				content:'';
+				display:table;
+			}
+			.clearfix:after{
+				clear:both;
+			}
+			
+			/*嘴巴*/
+			.zb{
+				width:100px;
+				height:15px;
+				background: lightyellow;
+				border: 5px solid black;
+				margin:0 auto;
+				border-radius: 50%;
+				box-shadow:0 0 8px inset;
+			}
+			.kuzi .line1{
+				width:90px;
+				height:60px;
+				border: 5px solid #000000;
+				margin:40px auto;
+				border-bottom-left-radius:40px;
+				border-bottom-right-radius:40px;
+			}
+			.kuzi .line2{
+				width:60px;
+				height:30px;
+				border-bottom: 5px solid #000000;
+				border-right: 5px solid #000000;
+				position: absolute;
+				bottom: 70px;
+				left:0px;
+				border-bottom-right-radius:100%;
+			}
+			.kuzi .line3{
+				width:60px;
+				height:30px;
+				border-bottom: 5px solid #000000;
+				border-left: 5px solid #000000;
+				position: absolute;
+				bottom: 70px;
+				right:0px;
+				border-bottom-left-radius:100%;
+			}
+			.kuzi .line4{
+				width:5px;
+				height:50px;
+				background: black;
+				position:absolute;
+				bottom:0;
+				left:0px;
+				right:0;
+				margin:auto;
+			}
+			.foot{
+				width:250px;
+				height:90px;
+				position: absolute;
+				left:0;
+				right:0;
+				bottom:5px;
+				margin:auto;
+				/*z-index: -1;*/
+			}
+			.foot>div{
+				display: inline-block;
+				width:47%;
+				/*border: 1px solid red;*/
+				height:100%;
+				position: relative;
+			}
+			.foot .left span{
+				width:10px;
+				height:30px;
+				background:#262626;
+				border-top: 5px solid #000000;
+				border-left: 5px solid #000000;
+				border-right: 5px solid #000000;
+				display: inline-block;
+				position: absolute;
+				left: 50%;
+				z-index: 22;
+			}
+			.foot .right span{
+				width:10px;
+				height:30px;
+				background:#262626;
+				border-top: 5px solid #000000;
+				border-left: 5px solid #000000;
+				border-right: 5px solid #000000;
+				display: inline-block;
+				position: absolute;
+				right: 50%;
+				z-index: 22;
+			}
+			.foot .left span:nth-of-type(2){
+				width:50px;
+				height:30px;
+				border:5px solid #000000;
+				position: absolute;
+				bottom:10px;
+				left:19px;
+				transform: translateY(-10px)  rotate(-2deg);
+				-moz-transform: translateY(-10px)  rotate(-2deg);
+				-ms-transform: translateY(-10px)  rotate(-2deg);
+				-webkit-transform: translateY(-10px)  rotate(-2deg);
+				border-top-left-radius: 70%;
+				z-index:0;
+			}
+			.foot .right span:nth-of-type(2){
+				width:50px;
+				height:30px;
+				border:5px solid #000000;
+				position: absolute;
+				bottom:22px;
+				left:19px;
+				border-top-right-radius: 70%;
+				transform: translateX(20px) rotate(-3deg);
+				-webkit-transform: translateX(20px) rotate(-3deg);
+				-moz-transform: translateX(20px) rotate(-3deg);
+				-ms-transform: translateX(20px) rotate(-3deg);
+				z-index:0;
+			}
+			.shadow{
+				width:260px;
+				height:10px ;
+				box-shadow: 0 0 50px 10px #8C8C8C;
+				border-radius:50%;
+				position: absolute;
+				bottom:20px;
+				left:0;
+				right:0;
+				margin:auto;
+				background: #ccc;
+			}
+			.s1{
+				width:90px;
+				height:60px;
+				border:5px solid #000000;
+				border-right: none;
+				border-bottom: none;
+				border-top-left-radius:40px;
+				transform: rotate(-55deg);
+				-moz-transform: rotate(-55deg);
+				-webkit-transform: rotate(-55deg);
+				-ms-transform: rotate(-55deg);
+				position: absolute;
+				top:45%;
+				z-index: 0;
+				background: #101010;
+			}
+			.s2{
+				width:90px;
+				height:60px;
+				border:5px solid #000000;
+				border-left: none;
+				border-bottom: none;
+				border-top-right-radius:40px;
+				transform: rotate(55deg);
+				-webkit-transform: rotate(55deg);
+				-ms-transform: rotate(55deg);
+				-moz-transform: rotate(55deg);
+				position: absolute;
+				top:45%;
+				right:0;
+				z-index: 0;
+				background: #101010;
+			}
+			.s1 span{
+				width:50px;
+				height:30px;
+				border:5px solid #000000;
+				border-right: none;
+				border-bottom: none;
+				border-top-left-radius:20px;
+				margin-left:15px;
+				margin-top:15px;
+				position: absolute;
+				background: whitesmoke;
+			}
+			.s2 span{
+				width:50px;
+				height:30px;
+				border:5px solid #000000;
+				border-left: none;
+				border-bottom: none;
+				border-top-right-radius:20px;
+				margin-left:15px;
+				margin-top:15px;
+				position: absolute;
+				background: whitesmoke;
+			}
+			.hair{
+				width:200px;
+				height:50px;
+				margin:0 auto;
+			}
+			.hair span:nth-of-type(1){
+				display: inline-block;
+				width:40px;
+				height:50px;
+				border:5px solid #000000;
+				border-right:none;
+				border-top:none;
+				border-top-left-radius:50%;
+				border-bottom-left-radius:40%;
+				margin-left:10px;
+			}
+			.hair span:nth-of-type(2){
+				display: inline-block;
+				width:40px;
+				height:50px;
+				border:5px solid #000000;
+				border-right:none;
+				border-top:none;
+				border-top-left-radius:50%;
+				border-bottom-left-radius:40%;
+				margin-left:10px;
+			}
+			.hair span:nth-of-type(3){
+				display: inline-block;
+				width:40px;
+				height:50px;
+				border:5px solid #000000;
+				border-right:none;
+				border-top:none;
+				border-top-left-radius:50%;
+				border-bottom-left-radius:40%;
+				margin-left:5px;
+			}
+			#black{
+				width:20px;
+				height:20px;
+				background:rgba(0,0,0,0.7);
+				box-shadow: 0 0 1px rgba(211,211,211,0.3);
+				border-radius:50%;
+				margin-top:5px;
+				float:right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="hair">
+				<span id="hair1"></span>
+				<span id="hair2"></span>
+				<span id="hair3"></span>
+			</div>
+			<!--小黄人-->
+			<div class="litteH">
+				<!--眼睛-->
+				<div class="item"></div>
+				<div class="yj">
+					<div class="l" id="l">
+						<span>
+							<span id="y-w-l">
+								<div id="black"></div>
+							</span>
+						</span>
+					</div>
+					<div class="r" id="r">
+						<span class="">
+							<span id="y-w-r">
+								<div id="black"></div>
+							</span>
+						</span>
+					</div>
+				</div>
+				<div class="item2"></div>
+				
+				<!--嘴巴-->
+				<div class="zb">
+				   <span></span>
+				</div>
+				
+				
+				
+				<!--裤子-->
+				<div class="kuzi">
+					<!--正方形-->
+					<div class="cobe"></div>
+					<!--吊带-->
+					<span>X</span>
+					<span align="left" class="clearfix">X</span>
+					
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+					<div class="line4"></div>
+				</div>
+			</div>
+			<!--脚部-->
+			<div class="foot">
+				<div class="left">
+					<span id=""></span>
+					<span id=""></span>
+				</div>
+				<div class="right">
+					<span id=""></span>
+					<span id=""></span>
+				</div>
+			</div>
+			<!--阴影-->
+            <div class="shadow"></div>
+			
+			<!--手-->
+			<div class="s1">
+				<span></span>
+			</div>
+			<div class="s2">
+				<span></span>
+			</div>
+		</div>
+		
+</html>
+<script type="text/javascript">
+	//获取到卡片
+	var wrapper=document.getElementById("wrapper");
+	
+	//获取到眼珠大黑色部分
+	var 
+	    l=document.getElementById("l").getElementsByTagName('span')[0],
+	    r=document.getElementById("r").getElementsByTagName('span')[0];
+	    
+	//获取到眼珠 不包含眼珠里面部分
+	var yl=document.getElementById("y-w-l"),
+	    yr=document.getElementById("y-w-r");
+	    
+	//获取最小的眼珠
+	var black=document.getElementById("black");
+	var black1=yr.getElementsByTagName("div")[0];
+	
+	//获取到脚
+	var lFoot=document.getElementsByClassName("left")[0],
+		rFoot=document.getElementsByClassName("right")[0];
+		
+	//获取到手
+	var sl=document.getElementsByClassName('s1')[0],
+		sr=document.getElementsByClassName('s2')[0];
+		
+	//头发
+	var hair1=document.getElementById("hair1"),
+		hair2=document.getElementById("hair2"),
+		hair3=document.getElementById("hair3");
+		
+	document.onmousemove=function (ev){
+		ev=ev||window.event;
+		var x=ev.clientX,
+		    y=ev.clientY;
+		
+		//眼球左右
+		if(x<window.innerWidth/2){
+			black.style.float="left";
+			black1.style.float="left";
+			yl.style.left=-10+'px';
+			yr.style.left=-10+'px';
+			l.style.left=-10+'px';
+			r.style.left=-10+'px';
+			lFoot.style.transform="rotate(2deg) translateY(-3px)";
+			rFoot.style.transform="rotate(2deg) translateY(-3px)";
+			sr.style.transform="rotate(55deg)";
+			sl.style.transform="rotate(-50deg)";
+			hair1.style.borderTopLeftRadius="10px";
+			hair2.style.borderTopLeftRadius="10px";
+			hair3.style.borderTopLeftRadius="10px";
+		}else{
+			black.style.float="right";
+			black1.style.float="right";
+			yl.style.left=20+'px';
+			yr.style.left=20+'px';
+			l.style.left=30+'px';
+			r.style.left=30+'px';
+			rFoot.style.transform="rotate(-10deg) translateY(-10px)";
+			lFoot.style.transform="rotate(10deg) translateY(-10px)";
+			sl.style.transform="rotate(-55deg)";
+			sr.style.transform="rotate(50deg)";
+			var hair;
+			for(var i=1;i<4;i++){
+				
+			}
+			hair1.style.borderTopLeftRadius="50%";
+			hair2.style.borderTopLeftRadius="50%";
+			hair3.style.borderTopLeftRadius="50%";
+		}
+		
+		//眼球上下
+		if(y>innerHeight/2-200){
+			black.style.marginTop="15px";
+			black1.style.marginTop="15px";
+			yl.style.marginTop="20px";
+			yr.style.marginTop="20px";
+			l.style.top="10px";
+			r.style.top="10px";
+		}else{
+			black.style.marginTop="5px";
+			black1.style.marginTop="5px";
+			yl.style.marginTop="10px";
+			yr.style.marginTop="10px";
+			l.style.top="-15px";
+			r.style.top="-15px";
+			
+		}
+		
+
+	}
+	
+</script>
+
+>>>>>>> 33df96ed40e8c84eb0e930de51709abec652df1f

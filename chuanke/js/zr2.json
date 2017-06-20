@@ -1,0 +1,15 @@
+[{"title":"热门学校","child":[{"img":"images/rz-3.jpg","name":"文鼎电脑学校"},
+							{"img":"images/rz-4.jpg","name":"互联网技术就业速成班"},
+							{"img":"images/rz-5.jpg","name":"对啊网百度旗舰店"},
+							{"img":"images/rz-6.jpg","name":"北京尚学堂"},
+							{"img":"images/rz-7.jpg","name":"格致教育"}],
+"more":"查看更多学校排名>>"
+},
+{"title":"学校排行","child":[{"img":"images/rz-4.jpg","name":"互联网技术就业速成班"},
+							{"img":"images/rz-3.jpg","name":"文鼎电脑学校"},
+							{"img":"images/rz-7.jpg","name":"格致教育"},							
+							{"img":"images/rz-5.jpg","name":"对啊网百度旗舰店"},
+							{"img":"images/rz-6.jpg","name":"北京尚学堂"}],
+"more":"查看更多学校排名>>"
+}
+]
