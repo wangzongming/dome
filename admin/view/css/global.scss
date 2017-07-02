@@ -1,0 +1,46 @@
+@mixin size($w:100px,$h:100px){
+    width:$w;
+    height:$h;
+}
+@mixin bg($color:red){
+    background:$color;
+}
+@mixin fs($size:16px){
+    font-size:$size;
+}
+@mixin text($c:black,$lh:18px){
+    color:$c;
+    line-height: $lh;
+}
+@mixin abs{
+    position:absolute;
+}
+@mixin clearfix{
+    &:after,&:before{
+        content:"";
+        display:table;
+    }
+    &:after{
+        clear:both;
+    }
+}
+@mixin bor($w:1px,$s:solid,$c:red){
+    border:$w $s $c;
+}
+@mixin display($s:inline-block){
+    display:$s;
+}
+@mixin bz{
+    box-sizing: border-box;
+}
+@mixin cursor{
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+

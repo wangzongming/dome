@@ -1,0 +1,127 @@
+@import "global.scss";
+*{
+    margin:0;
+    padding:0;
+}
+//头部样式开始
+.header{
+    @include size(100%,auto); 
+    margin:0 auto;
+    min-width:1000px;
+    // @include bor;
+    @include clearfix;
+    div{
+        @include display;
+    }
+    .left{
+        float:left;
+        img{
+            @include size(120px,50px);
+        }
+        padding:10px 70px;
+        @include bz;
+    }
+    .right{
+        @include fs(14px);
+        color:#ccc;
+        padding-top:50px;
+        padding-right:100px;
+        @include bz;
+        float:right;
+        span{
+            @include cursor;
+            padding:0 3px;
+            &:hover{
+                color:blueviolet;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+//头部样式结束
+//主要内容
+.body{
+    @include size(100%,480px);
+    min-width: 100px;
+    margin:0 auto;
+    // @include bor;
+    @include bg(url(../img/bg.jpg) no-repeat center 0);
+    background-size:auto 100%;
+    vertical-align: middle;
+    .land-box{
+        @include size(450px,450px);
+        // @include bor($c:blue,$w:2px);
+        float: right;
+        margin-right:50px;
+        margin-top:10px;
+        @include bg(white);
+        h3{
+            padding:20px 20px;
+            font-weight:400;
+            @include fs(18px);
+            // @include bor;
+            span{
+                float:right;
+                @include fs(13px);
+                font-weight:300;
+                color:blue;
+                @include cursor;
+            }
+        }//h3结束
+        .use{
+            @include size(380px,40px);
+            @include bor($c:#ccc);
+            margin:20px auto;
+            padding:0;
+            &:hover{
+                @include bor($c:#1AA24F);
+            }
+            span{
+                line-height: 40px;
+                @include fs(20px);
+                padding-left:10px;
+            }
+            input{
+                margin:0;
+                @include size(330px,100%);
+                @include bor($w:0);
+                outline: 0;
+                float:right;
+                @include fs(16px);
+            }
+        }
+        p{
+            padding-left:30px;
+            font-size:14px;
+            input{
+                outline: 0;
+                @include size(20px,20px);
+                float:left;
+                margin: 0 5px;
+            }
+        }
+        .btn{
+            @include size(380px,40px);
+            @include bor($c:#ccc);
+            margin:30px auto;
+            @include bz;
+            padding:0;
+            button{
+                @include bor($w:0);
+                outline: 0;
+                @include size(100%,100%);
+                @include bg(#1AA24F);
+                color:white;
+                @include fs(18px);
+                letter-spacing: 10px;
+                @include cursor;
+            }
+        }
+    }//登录框结束
+    .tishi{
+        color:red;
+        padding: 0 50px;
+        @include bz;
+    }
+}
+//主要内容over

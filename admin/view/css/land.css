@@ -1,0 +1,193 @@
+*{margin:0;padding:0;}
+body{
+    background:#ccc;
+}
+.land-box{
+    width:470px;
+    height:530px;
+    border-radius:10px;
+    position: fixed;
+    left:0;
+    right:0;
+    top:30px;
+    margin:auto;
+    background:url(../img/land-bg.png);
+    background-size:100% 100%;
+    box-shadow: 0 0 20px 5px white;
+}
+.top{
+    height:60px;
+    position: relative;
+}
+.top span{
+    color:#ccc;
+    font-size:30px;
+    font-weight: 500;
+    position: absolute;
+    right:20px;
+    top:10px;
+    cursor:pointer;
+    text-shadow:0 0 30px yellow;
+    display: inline-block;
+    border:1px solid #ccc;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    text-align: center;
+    line-height: 27px;
+}
+.top img{
+    width:100px;
+    height:40px;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    display: block;
+    margin:0 auto;
+}
+.p{
+    text-align: center;
+    font-size:14px;
+    color:#cccccc;
+}
+h3{
+    padding:20px;
+    box-sizing: border-box;
+    /*border:1px solid red;*/
+}
+h3 span{
+    font-size:18px;
+    font-weight:400;
+    padding-left:30px;
+    box-sizing: border-box;
+}
+h3 .yz{
+    float:right;
+    padding-right:30px;
+    font-size:14px;
+    margin-top:10px;
+    box-sizing: border-box;
+}
+h3 .yz a{
+    color:#009DE6;
+}
+.use{
+    border:1px solid #ccc;
+    width:380px;
+    height:40px;
+    margin:10px auto;
+    line-height: 40px;
+}
+.use span{
+    font-size:30px;
+    padding-left:5px;
+    box-sizing:border-box;
+}
+.use input{
+    height:100%;
+    width:340px;
+    float:right;
+    box-sizing: border-box;
+    background:transparent;
+    font-size:16px;
+    outline: 0;
+    border:0;
+}
+.use:hover{
+    border-color:#009DE6;
+}
+.jizhu{
+    padding:0 40px;
+    box-sizing:border-box;
+    font-size:14px;
+    /*border:1px solid rebeccapurple;*/
+    color:#999999;
+}
+.jizhu input{
+    outline:0;
+    width: 15px;
+    height:15px;
+    float:left;
+    margin: 0 5px;
+}
+.jizhu span{
+    float:right;
+    font-size:16px;
+}
+.jizhu span a{
+    color:#009DE6;
+}
+.btn{
+    width:380px;
+    height:40px;
+    display: block;
+    outline:none;
+    background:#009DE6;
+    border:0;
+    color:white;
+    font-size:20px;
+    letter-spacing: 10px;
+    margin:20px auto;
+    cursor:pointer;
+}
+.bottom{
+    /*border:1px solid red;*/
+    width:100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    height:120px;
+}
+.bottom .zhuce{
+    text-align: center;
+    font-size:16px;
+    color:#999999;
+}
+.bottom .other{
+    text-align: center;
+    font-size:13px;
+    color:#999999;
+    margin:10px 0;
+}
+.bottom .other span{
+    display:inline-block;
+    height:1px;
+    width:100px;
+    background:#999999;
+    transform: translateY(-3px);
+}
+.bottom .img{
+    color:#009DE6;
+    text-align: center;
+}
+.bottom .img span{
+    font-size:35px;
+    cursor:pointer;
+}
+.bottom .select span{
+    float:left;
+    color:#999999;
+    font-size:14px;
+    display:inline-block;
+    text-align: center;
+    width:49%;
+}
+.bottom .select span:first-child{
+    border-right:1px solid #999999;
+    box-sizing: border-box;
+}
+.bottom .select a{
+    color:#999999;
+}
+.ts{
+    color:red;
+    position: absolute;
+    bottom:-85px;
+    left:50px;
+    font-size:14px;
+    display:inline-block;
+}
+
+
+

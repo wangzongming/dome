@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../controller/angular.min.js"></script>
+</head>
+<body ng-app='myapp' ng-controller="ctrl">
+    </h1>  个人中心页面欢迎你{{name}} </h1>
+    <p>乱七八糟的数据啥的</p>
+</body>
+</html>
+<script>
+    var app=angular.module('myapp',[]);
+    app.controller('ctrl',function($scope){
+        $scope.name="尊敬的vip";
+    });//controll
+</script>
+
+
+

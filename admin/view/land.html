@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>用户登录</title>
+  <script src="../controller/angular.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="./font2/iconfont.css">
+  <link rel="stylesheet" href="css/land.css">
+</head>
+<body ng-app="myapp" ng-controller="ctrl">
+    <div class="land-box">
+        <div class='top'>
+            <img src="img/logo.png" alt="">
+            <span>x</span>
+            <div class="ts" ng-bind="ts" ng-cloak>{{ts}}</div>
+        </div>
+        <p class="p">一个账号玩转所有乐视服务</p>
+        <h3>
+            <span>登录</span>
+            <span class="yz">
+                <a href="#"><span class="iconfont icon-shouji"></span>短信验证码登录</a>
+            </span>
+        </h3>
+        
+        <div class='use'>
+            <span class="iconfont icon-zhanghao"></span>
+            <input type="text" placeholder="请输入账号" ng-style='red' ng-focus="change_u(username)"  ng-model="username">
+        </div>
+         <div class='use'>
+            <span class="iconfont icon-mima"></span>
+            <input type="text" placeholder="请输入密码"  ng-style='red_p' ng-focus="change_p(password)"  ng-model="password">
+        </div>
+        <div class='jizhu'>
+            <input type="checkbox">记住登录状态
+            <span><a href='#'>重置密码</a></span>
+        </div>
+        <input type="button" class='btn' value="登录" ng-click="send(username,password)">
+        <div class='bottom'>
+            <p class="zhuce">
+                从这里出发，开启乐视生态世界 <a href="http://127.0.0.1/view/register.html">立即注册</a>
+            </p>
+            <div class="other">
+                <span></span>
+                其他方式登录
+                <span></span>
+            </div>
+            <div class='img'>
+                <span class='iconfont icon-QQ'></span>
+                <span class='iconfont icon-weibo'></span>
+                <span class='iconfont icon-weixin'></span>
+            </div>
+            <div class="select">
+                <span>语言: <a href="#">简体中文</a></span>
+                
+              <span>国家/地区: <a href="#">中国</a></span>
+            </div>
+        </div>
+       
+    </div>
+</body>
+
+</html>
+<script src="js/land.js"></script>

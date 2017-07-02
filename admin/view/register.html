@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册账号</title>
+     <script src="../controller/angular.min.js"></script>
+     <link rel="stylesheet" href="css/register.css">
+     <link rel="stylesheet" type="text/css" href="./font/iconfont.css">
+     <link rel="stylesheet" type="text/css" href="./font2/iconfont.css">
+</head>
+<body ng-app="myapp" ng-controller="ctrl">
+<!--头部-->
+<div class="header">
+    <div class="left">
+        <img src="img/logo.png" alt="">
+    </div>
+    <div class="right">
+        <strong>语言：</strong>
+        <span>简体中文</span>
+        <span> |</span>
+        <strong>国家/地区：</strong>
+        <span>中国</span>
+        <span>|</span>
+        <span>帮助</span>
+    </div>
+</div>
+<!--头部over-->
+<!--内容-->
+<div class="body">
+    <div class="land-box">
+        <h3>注册<span>立即登录</span></h3>
+        <div class="use">
+            <span class="iconfont icon-zhanghao"></span>
+            <input type="text" ng-model="username" placeholder="请输入注册账号" ng-init='username="admin" '>
+        </div>
+        <div class="use">
+            <span class="iconfont icon-suo"></span>
+            <input type="text" ng-model="password" placeholder="请输入注册密码" ng-init='password="admin888"'>
+        </div>
+        <div class="use">
+            <span class="iconfont icon-shouji"></span>
+            <input type="phone" ng-model="tel" placeholder="请输入电话号码"  ng-init='tel="12345678900" '>
+        </div>
+        <p>
+            <input type="checkbox" ng-model="check">
+            我已阅读并同意 <a href="javascript:alert('这个协议并没有 哈哈哈');">乐视用户协议</a>
+        </p>
+        <div class="btn">
+          <button ng-click="tijiao(username,password,tel)">注册</button>
+        </div>
+        <div class="tishi" ng-cloak>{{tishi}}</div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+     var reg_user=/^\w{4,15}$/;//账号正则 四到五个字符
+     var reg_tel=/^[1]\d{10}$/;//电话号码正则
+    var app=angular.module('myapp',[]);
+    app.controller('ctrl',($scope,$http)=>{//http方法跑起来
+        $scope.tishi="";
+        $scope.tijiao=function(username,password,tel){
+       $scope.user=username;
+       $scope.pwd=password;
+       $scope.tell=tel;
+        if($scope.user){//填写账号判断
+            if($scope.pwd){//填写密码判断
+                if($scope.tell){//填写电话的判断
+                    if($scope.check){//勾选判断
+                       if(reg_user.test($scope.user)){//填写账号格式判断
+                            if(reg_user.test($scope.pwd)){//填写密码格式判断
+                                if(reg_tel.test($scope.tel)){//填写电话格式格式判断
+                                    $http({
+                                    'url':'http://localhost:2017',
+                                    'method':'post',
+                                    'data':{"use":username,"pwd":password,"tel":tel},
+                                    "responseType":"json",
+                                    "headers":{"Content-Type":"application/x-www-form-urlencoded"},
+                                    "transform":function(obj){
+                                    var str=[];
+                                    for(var p in obj){
+                                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                                    }
+                                    return str.join("&");
+                                }
+                            }).success(function(res){
+                                $scope.tishi="注册中..."
+                                if(res==true){
+                                    $scope.tishi="注册成功请稍等";
+                                    window.location.href='./land.html';
+                                }else{
+                                    $scope.tishi='注册失败'+username+'已被别人注册了'
+                                }
+                            }).error(function(){
+                                $scope.tishi="注册失败请检查网络或与我们联系";
+                                console.log("请求后台数据失败...");
+                            })//http方法
+                                }else{//填写电话格式判断
+                                    $scope.tishi='电话号码格式错误，格式：11个数字，1开头'
+                                }//填写密码格式判断
+                            }else{//填写密码格式判断
+                                 $scope.tishi='密码格式错误，格式：15个字符以内（不能包含中文）'
+                            }//填写密码格式判断
+                       }else{//填写账号格式判断
+                             $scope.tishi='账号格式错误，格式：15个字符以内（不能包含中文）'
+                       }//填写账号格式判断
+                    }else{//勾选判断
+                        $scope.tishi='请阅读并同意乐视用户协议'
+                    }//勾选判断
+                }else{//填写电话的判断
+                    $scope.tishi="您没有填写电话号码哟！";
+                     return;
+                }//填写密码判断
+            }else{//填写密码判断
+                 $scope.tishi="您没有填写密码哟！";
+                 return;
+            }//填写密码判断
+        }else{//填写账号判断
+            $scope.tishi="您没有填写账号哟！";
+            return;
+        }//填写账号判duan
+
+    }//点击函数
+
+
+    });//controll
+
+    /*!
+        by : 1746809408@qq.com
+    */
+</script>
+
+
+
